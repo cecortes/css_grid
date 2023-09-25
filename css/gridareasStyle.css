@@ -1,0 +1,121 @@
+:root {
+  --colorFondo: #303030;
+  --gris: rgb(136, 136, 136);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--gris);
+}
+
+.grid-container {
+  display: grid; /* Esto convierte el contenedor en un grid */
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "card1 card1 card2"
+    "card3 card4 card4"
+    "card5 card6 card7"
+    "card8 card8 card8";
+  gap: 20px;
+}
+
+.caja {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 8px 5px 3px 3px rgba(50, 50, 50, 0.5);
+}
+
+.img {
+  width: 50%;
+  height: 90%;
+  object-fit: fill;
+  padding: 20px 0;
+}
+
+.copy {
+  width: 45%;
+  height: 100%;
+}
+
+.text {
+  color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: justify;
+}
+
+#caja-1 {
+  grid-area: card1;
+  background-color: var(--colorFondo);
+}
+#caja-2 {
+  grid-area: card2;
+  background-color: var(--colorFondo);
+}
+
+#caja-3 {
+  grid-area: card3;
+  background-color: var(--colorFondo);
+}
+
+#caja-4 {
+  grid-area: card4;
+  background-color: var(--colorFondo);
+}
+
+#caja-5 {
+  grid-area: card5;
+  background-color: var(--colorFondo);
+}
+
+#caja-6 {
+  grid-area: card6;
+  background-color: var(--colorFondo);
+}
+
+#caja-7 {
+  grid-area: card7;
+  background-color: var(--colorFondo);
+}
+
+#caja-8 {
+  grid-area: card8;
+  background-color: var(--colorFondo);
+}
+
+@media screen and (max-width: 390px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "card8"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card1";
+  }
+
+  .caja {
+    width: 80%;
+  }
+}
